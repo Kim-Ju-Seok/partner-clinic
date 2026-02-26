@@ -119,8 +119,8 @@ function renderHeader() {
 function renderFooter() {
   return `
   <div style="background:#405b45; overflow: hidden;">
-  <div class="wrap" id="me" style="padding:4rem 0 0 0; margin: 0; color:#fff; position: relative;">
-    <div class="dlw" style="display:flex; justify-content:space-between; align-items:flex-start; max-width:1200px; margin:0 auto; padding-bottom: 2rem; gap:2rem; position: relative; z-index: 10;">
+  <div class="wrap" id="me" style="padding:6rem 0; margin: 0 auto; color:#fff; position: relative;">
+    <div class="dlw" style="display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:0 auto; gap:2rem; position: relative; z-index: 10;">
       <!-- 좌측: 진료시간 -->
       <dt style="width: 30%; padding-right: 2rem; border-right: 1px solid rgba(255, 255, 255, 0.1);">
         <h4 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 2rem; margin-top: 0; border-bottom: 2px solid #fff; padding-bottom: 0.8rem; display: inline-block;">진료시간</h4>
