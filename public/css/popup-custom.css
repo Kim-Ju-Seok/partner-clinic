@@ -1,0 +1,183 @@
+/* ── Popup Layer ── */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-box {
+    background: var(--white);
+    max-width: 520px;
+    width: 90%;
+    border-radius: 4px;
+    overflow: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: var(--transition);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.popup-overlay.active .popup-box {
+    transform: translateY(0) scale(1);
+}
+
+.popup-header {
+    background: #36513d;
+    /* deep medical green */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.popup-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.popup-body {
+    padding: 0;
+    max-height: 500px;
+    /* 최대 높이만 지정 */
+    min-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+}
+
+.popup-body .notice-content {
+    padding: 25px 30px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    white-space: pre-wrap;
+    border-left: none !important;
+    /* 노란줄 절대 금지 */
+}
+
+/* 모든 내부 상속 스타일 제거 (노란줄 등) */
+.notice-content h4,
+.notice-content p,
+.notice-content div {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.notice-content h4 {
+    font-size: 18px;
+    color: #36513d;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.notice-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.notice-content td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Tab Grid - 2줄(3열)로 고정하여 긴 글자도 수용 */
+.popup-tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #1a1a1a;
+    border-top: 1px solid #36513d;
+}
+
+.popup-tab-btn {
+    padding: 8px 4px;
+    color: #999;
+    font-size: 11.5px;
+    text-align: center;
+    border: 0.5px solid #2a2a2a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    word-break: keep-all;
+    /* 단어 단위 줄바꿈 */
+    transition: all 0.2s;
+    line-height: 1.3;
+}
+
+.popup-tab-btn.active {
+    background: #36513d;
+    color: #fff;
+    font-weight: 700;
+}
+
+.popup-tab-btn:hover:not(.active) {
+    background: #2a2a2a;
+    color: #ddd;
+}
+
+.popup-footer {
+    background: #111;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+}
+
+.popup-footer label {
+    color: #aaa;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.popup-footer .close-btn {
+    background: #36513d;
+    color: #fff;
+    padding: 6px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.popup-footer .close-btn:hover {
+    background: #2d4332;
+}
+
+/* 애니메이션 */
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-overlay.active .popup-box {
+    animation: popupFadeIn 0.4s ease forwards;
+}

@@ -1,0 +1,34 @@
+<h2>공지사항</h2>
+<div class="board-section">
+    <table class="board-table" id="noticeTable">
+        <thead>
+            <tr>
+                <th style="width:60px">번호</th>
+                <th>제목</th>
+                <th style="width:120px">작성일</th>
+                <th style="width:80px">조회</th>
+            </tr>
+        </thead>
+        <tbody id="noticeBody">
+            <tr>
+                <td colspan="4" style="text-align:center;padding:40px;color:#667085">로딩 중...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    fetch('/api/notices').then(r => r.json()).then(data => {
+        const body = document.getElementById('noticeBody');
+        if (!body) return;
+        body.innerHTML = data.map((n, i) => `
+            <tr onclick="showBoardDetail('notices', ${n.id})" style="cursor:pointer">
+                <td>${data.length - i}</td>
+                <td style="text-align:left">${n.title}</td>
+                <td>${n.created_at?.split('T')[0] || n.created_at}</td>
+                <td>${n.views}</td>
+            </tr>`).join('');
+    }).catch(() => {
+        const body = document.getElementById('noticeBody');
+        if (body) body.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px">서버 연결이 필요합니다</td></tr>';
+    });
+</script>

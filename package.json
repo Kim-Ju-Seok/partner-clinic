@@ -1,0 +1,22 @@
+{
+    "name": "partner-orthopedics",
+    "version": "1.0.0",
+    "description": "파트너정형외과 홈페이지",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node server.js",
+        "live": "node dev-server.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^3.0.3",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3"
+    },
+    "devDependencies": {
+        "browser-sync": "^3.0.4",
+        "connect-livereload": "^0.6.1",
+        "livereload": "^0.10.3"
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="파트너정형외과 - 대학병원 임상교수 출신 전문의 진료, 365일 연중무휴, 미세침습수술·비수술·척추관절·도수물리치료 클리닉">
+  <meta name="keywords" content="정형외과, 송파구 정형외과, 파트너정형외과, 척추, 관절, 미세침습수술, 비수술치료, 도수치료, 물리치료, 체외충격파">
+  <meta name="author" content="파트너정형외과의원">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="파트너정형외과의원 - 척추·관절 건강 파트너">
+  <meta property="og:description" content="대학병원 임상교수 출신 전문의 진료, 365일 연중무휴. 미세침습수술·비수술·척추관절·도수물리치료 클리닉">
+  <meta property="og:url" content="https://www.partner-ortho.com">
+  <meta property="og:site_name" content="파트너정형외과의원">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="파트너정형외과의원">
+  <meta name="twitter:description" content="대학병원 임상교수 출신 전문의 진료, 365일 연중무휴">
+  <meta name="twitter:image" content="https://www.partner-ortho.com/images/og-image.jpg">
+
+  <meta property="og:image" content="https://www.partner-ortho.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <title>파트너정형외과의원 | 척추·관절 건강 파트너</title>
+  <link rel="canonical" href="https://www.partner-ortho.com">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/popup-custom.css?v=2">
+
+  <!-- JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "파트너정형외과의원",
+    "alternateName": "Partner Orthopedics",
+    "url": "https://www.partner-ortho.com",
+    "telephone": "+82-2-430-1410",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "송파대로 141, 2층(문정동, 르피에드)",
+      "addressLocality": "송파구",
+      "addressRegion": "서울특별시",
+      "postalCode": "05836",
+      "addressCountry": "KR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "14:00" }
+    ],
+    "medicalSpecialty": "Orthopedic",
+    "description": "대학병원 임상교수 출신 정형외과 전문의 3인 진료. 365일 연중무휴. 미세침습수술, 비수술치료, 척추관절, 도수물리치료 클리닉."
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="headerArea" role="banner"></header>
+
+  <!-- Main Content (SPA) -->
+  <main id="mainContent" role="main"></main>
+
+  <!-- Footer -->
+  <footer id="footerArea" role="contentinfo"></footer>
+
+  <!-- Popup -->
+  <div id="popupArea"></div>
+
+  <!-- Floating Buttons -->
+  <div id="floatingArea"></div>
+
+  <script src="js/components.js?v=2"></script>
+  <script src="js/pages.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
+  <script>
+    // 공통 컴포넌트 삽입
+    document.getElementById('headerArea').innerHTML = renderHeader();
+    document.getElementById('footerArea').innerHTML = renderFooter();
+    document.getElementById('floatingArea').innerHTML = renderFloatingBtns();
+    document.getElementById('popupArea').innerHTML = renderPopup();
+    // 팝업은 API에서 동적 로드
+    loadActivePopup();
+  </script>
+</body>
+
+</html>
