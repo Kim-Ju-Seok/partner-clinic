@@ -39,7 +39,11 @@ const DEFAULT_DATA = {
 
 // data 폴더 생성
 const dataDir = path.join(__dirname, 'data');
-if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+try {
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+} catch (e) {
+  console.warn('[DB] data 폴더 생성 실패 (읽기 전용 환경일 수 있음)');
+}
 
 // 간단한 파일 잠금 (동시 쓰기 방지)
 function acquireLock(timeout = 3000) {
