@@ -70,43 +70,49 @@ function releaseLock() {
   try { fs.unlinkSync(LOCK_PATH); } catch (e) { }
 }
 
-// DB 로드 (없으면 기본 데이터로 생성)
+// ── 데이터베이스 로드 및 저장 유틸 ──
+let memoryDB = null;
+
 function loadDB() {
+  if (memoryDB) return memoryDB;
+
   try {
     if (fs.existsSync(DB_PATH)) {
       const data = JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
-      // 마이그레이션: 기존 DB에 없는 필드 보충
+      // 기본 필드 보충 (마이그레이션)
       if (!data.popups) data.popups = DEFAULT_DATA.popups;
       if (!data.admin) data.admin = DEFAULT_DATA.admin;
-      if (!data._idCounters) {
-        data._idCounters = {
-          notices: data.notices.length > 0 ? Math.max(...data.notices.map(n => n.id)) : 0,
-          news: data.news.length > 0 ? Math.max(...data.news.map(n => n.id)) : 0,
-          consultations: data.consultations.length > 0 ? Math.max(...data.consultations.map(c => c.id)) : 0,
-          popups: (data.popups || []).length > 0 ? Math.max(...data.popups.map(p => p.id)) : 0
-        };
-      }
+      if (!data._idCounters) data._idCounters = DEFAULT_DATA._idCounters;
+      memoryDB = data;
       return data;
     }
   } catch (e) {
-    console.error('[DB] 파일 로드 실패:', e.message);
+    console.error('[DB] 로드 실패, 기본 데이터 사용:', e.message);
   }
-  saveDB(DEFAULT_DATA);
-  return JSON.parse(JSON.stringify(DEFAULT_DATA));
+
+  memoryDB = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  return memoryDB;
 }
 
 function saveDB(data) {
-  acquireLock();
+  memoryDB = data;
+
+  // Vercel 환경인지 확인
+  const isVercel = process.env.VERCEL || process.env.NODE_ENV === 'production';
+
   try {
-    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf-8');
+    // 로컬 환경에서만 파일 저장 시도, 실패해도 서버는 유지
+    if (!isVercel) {
+      if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+      fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf-8');
+    }
   } catch (e) {
-    console.error('[DB] 파일 저장 실패:', e.message);
-  } finally {
-    releaseLock();
+    // 쓰기 실패해도 로그만 남기고 무시 (서버 중단 방지)
+    console.warn('[DB] 파일 저장 불가 (일시적인 메모리 저장 모드):', e.message);
   }
 }
 
-// 고유 ID 생성 (카운터 기반, 중복 방지)
+// 고유 ID 생성
 function nextId(data, type) {
   if (!data._idCounters) data._idCounters = {};
   if (!data._idCounters[type]) data._idCounters[type] = 0;
@@ -114,5 +120,8 @@ function nextId(data, type) {
   return data._idCounters[type];
 }
 
-// 내보내기
+// Vercel에서 에러를 유발하는 잠금 로직 비활성화 유틸
+function acquireLock() { return true; }
+function releaseLock() { return true; }
+
 module.exports = { loadDB, saveDB, nextId };
