@@ -94,16 +94,16 @@ function renderHomePage() {
     <h4>척추·관절 건강 <span class="">파트너</span> 정형외과</h4>
     <div class="gra_bg">뛰어난 의료진과 첨단 의료시스템으로 꼼꼼하게 진료하는 파트너정형외과는<br> 올바르고 정확한 진단, 정직한 진료로 환자분들의 건강을 책임지겠습니다.</div>
     <dl class="dlw js">
-      <dd><a href="#page=2_1" onclick="navigateTo('2_1')"><i><img src="https://partneros.kr/img/ma_icon1.png" alt="미세침습 수술클리닉"></i>
+      <dd><a href="#page=2_1" onclick="navigateTo('2_1')"><i><img src="/img/ma_icon1.png" alt="미세침습 수술클리닉"></i>
           <p>미세침습<br>수술클리닉</p>
         </a></dd>
-      <dd><a href="#page=3_1" onclick="navigateTo('3_1')"><i><img src="https://partneros.kr/img/ma_icon2.png" alt="비수술 클리닉"></i>
+      <dd><a href="#page=3_1" onclick="navigateTo('3_1')"><i><img src="/img/ma_icon2.png" alt="비수술 클리닉"></i>
           <p>비수술<br>클리닉</p>
         </a></dd>
-      <dd><a href="#page=4_1" onclick="navigateTo('4_1')"><i><img src="https://partneros.kr/img/ma_icon3.png" alt="척추·관절 클리닉"></i>
+      <dd><a href="#page=4_1" onclick="navigateTo('4_1')"><i><img src="/img/ma_icon3.png" alt="척추·관절 클리닉"></i>
           <p>척추·관절<br>클리닉</p>
         </a></dd>
-      <dd><a href="#page=5_1" onclick="navigateTo('5_1')"><i><img src="https://partneros.kr/img/ma_icon4.png" alt="도수·물리치료 클리닉"></i>
+      <dd><a href="#page=5_1" onclick="navigateTo('5_1')"><i><img src="/img/ma_icon4.png" alt="도수·물리치료 클리닉"></i>
           <p>도수·물리치료<br>클리닉</p>
         </a></dd>
     </dl>
@@ -112,7 +112,7 @@ function renderHomePage() {
   <div class="wrap" id="mb">
     <dl class="dlw js br">
       <dt class="vc">
-        <figure><img src="https://partneros.kr/img/mb_img.png" alt="파트너 정형외과"></figure>
+        <figure><img src="/img/mb_img.png" alt="파트너 정형외과"></figure>
       </dt>
       <dd>
         <h4>파트너 정형외과<br>환자중심의 <b>환자 개별화 치료</b></h4>
@@ -120,15 +120,15 @@ function renderHomePage() {
           <dd><strong>1</strong>
             <p>전문의와의<br>자세한 문진</p>
           </dd>
-          <dt class="vc"><i><img src="https://partneros.kr/img/next_icon.png" alt="다음"></i></dt>
+          <dt class="vc"><i><img src="/img/next_icon.png" alt="다음"></i></dt>
           <dd><strong>2</strong>
             <p>영상학적<br>검진</p>
           </dd>
-          <dt class="vc"><i><img src="https://partneros.kr/img/next_icon.png" alt="다음"></i></dt>
+          <dt class="vc"><i><img src="/img/next_icon.png" alt="다음"></i></dt>
           <dd><strong>3</strong>
             <p>생체역학<br>검사</p>
           </dd>
-          <dt class="vc"><i><img src="https://partneros.kr/img/next_icon.png" alt="다음"></i></dt>
+          <dt class="vc"><i><img src="/img/next_icon.png" alt="다음"></i></dt>
           <dd><strong>4</strong>
             <p>숙련된 전문의의<br>신체 검사 및<br>기능(동작) 검사</p>
           </dd>
@@ -147,13 +147,13 @@ function renderHomePage() {
         <p>파트너는 특정치료만을 고집하지 않고,<br>치료 목적에 도움이 될 수 있도록<br>통합치료로 구성됩니다.</p>
       </dd>
       <dt class="vc">
-        <figure><img src="https://partneros.kr/img/mc_img.png" alt="통증 치료 단계"></figure>
+        <figure><img src="/img/mc_img.png" alt="통증 치료 단계"></figure>
       </dt>
     </dl>
   </div>
 
   <div class="wrap" id="md">
-    <i><img src="https://partneros.kr/img/logo_icon.svg" alt="로고 아이콘"></i>
+    <i><img src="/img/logo_icon.svg" alt="로고 아이콘"></i>
     <h4>대학병원 임상교수 출신 전문의에 의한 수준 높은 치료!</h4>
     <p>수술 및 비수술적 임상경험이 풍부한 실력있는 전문의가<br>나에게 꼭 필요한 비수술치료를 시행합니다.</p>
   </div>
