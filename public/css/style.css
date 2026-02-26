@@ -411,7 +411,7 @@ button {
   padding: 6rem 0;
 }
 
-#mb > dl.dlw {
+#mb>dl.dlw {
   display: flex;
   align-items: center;
   max-width: 1200px;
@@ -421,26 +421,26 @@ button {
 }
 
 /* 왼쪽: 환자중심 다이어그램 이미지 */
-#mb > dl > dt {
+#mb>dl>dt {
   width: 45%;
   flex-shrink: 0;
   padding-right: 3%;
 }
 
-#mb > dl > dt figure {
+#mb>dl>dt figure {
   border-radius: 0;
   box-shadow: none;
   overflow: visible;
 }
 
-#mb > dl > dt figure img {
+#mb>dl>dt figure img {
   width: 100%;
   max-width: 420px;
   display: block;
 }
 
 /* 오른쪽: 제목 + 단계 + 설명 */
-#mb > dl > dd {
+#mb>dl>dd {
   width: 55%;
   padding-left: 2%;
   display: flex;
@@ -448,7 +448,7 @@ button {
   justify-content: center;
 }
 
-#mb > dl > dd > h4 {
+#mb>dl>dd>h4 {
   font-size: 2.2rem;
   font-weight: 300;
   line-height: 1.4;
@@ -456,13 +456,13 @@ button {
   color: #333;
 }
 
-#mb > dl > dd > h4 b {
+#mb>dl>dd>h4 b {
   font-weight: 800;
   color: #222;
 }
 
 /* 단계 1~4 래퍼: 수평 정렬, 세로 가운데 맞춤 */
-#mb > dl > dd > dl.dlw {
+#mb>dl>dd>dl.dlw {
   display: flex;
   align-items: stretch;
   margin-bottom: 2rem;
@@ -471,7 +471,7 @@ button {
 }
 
 /* 단계 카드 (녹색, 동일 크기) */
-#mb > dl > dd > dl.dlw > dd {
+#mb>dl>dd>dl.dlw>dd {
   flex: 1 1 0;
   text-align: center;
   padding: 2em 0.5em 0.8em;
@@ -486,7 +486,7 @@ button {
 }
 
 /* 단계 번호 배지 */
-#mb > dl > dd > dl.dlw > dd > strong {
+#mb>dl>dd>dl.dlw>dd>strong {
   position: absolute;
   top: -0.7em;
   left: 50%;
@@ -503,11 +503,11 @@ button {
   font-weight: 500;
   border: 2px solid #fff;
   margin: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* 단계 설명 */
-#mb > dl > dd > dl.dlw > dd > p {
+#mb>dl>dd>dl.dlw>dd>p {
   font-size: 0.85rem;
   font-weight: 500;
   line-height: 1.3;
@@ -516,7 +516,7 @@ button {
 }
 
 /* 화살표: 수직 가운데 고정 */
-#mb > dl > dd > dl.dlw > dt.vc {
+#mb>dl>dd>dl.dlw>dt.vc {
   width: auto;
   flex-shrink: 0;
   display: flex;
@@ -526,11 +526,11 @@ button {
   align-self: center;
 }
 
-#mb > dl > dd > dl.dlw > dt.vc img {
+#mb>dl>dd>dl.dlw>dt.vc img {
   display: none;
 }
 
-#mb > dl > dd > dl.dlw > dt.vc::after {
+#mb>dl>dd>dl.dlw>dt.vc::after {
   content: '»';
   font-size: 1.2rem;
   color: #999;
@@ -538,7 +538,7 @@ button {
 }
 
 /* 하단 설명 */
-#mb > dl > dd > article {
+#mb>dl>dd>article {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.7;
@@ -591,7 +591,7 @@ button {
 }
 
 #md {
-  background: url('http://partneros.kr/img/md_bg.jpg') center/cover no-repeat;
+  background: url('https://partneros.kr/img/md_bg.jpg') center/cover no-repeat;
   padding: 8rem 0;
   text-align: center;
   color: #fff;
@@ -1531,7 +1531,7 @@ button {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: url('http://partneros.kr/img/sub_top_bg.jpg') center/cover no-repeat;
+  background: url('https://partneros.kr/img/sub_top_bg.jpg') center/cover no-repeat;
   /* fallback if image is missing */
   background-color: var(--primary);
 }
@@ -2343,6 +2343,7 @@ button {
     transform: rotate(360deg);
   }
 }
+
 /* ── Footer ── */
 .footer-area {
   display: flex;
@@ -2422,7 +2423,9 @@ button {
 
 /* ── Responsive Additions ── */
 @media (max-width: 1024px) {
-  .footer-map, .footer-info {
+
+  .footer-map,
+  .footer-info {
     width: 100%;
   }
 }
@@ -2431,7 +2434,7 @@ button {
   #me .dlw {
     flex-direction: column;
   }
-  
+
   #me dt {
     width: 100% !important;
     padding-right: 0 !important;
@@ -2439,12 +2442,12 @@ button {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 30px;
   }
-  
+
   #me dd {
     width: 100% !important;
     padding-left: 0 !important;
   }
-  
+
   #me dd h6 {
     text-align: center !important;
   }

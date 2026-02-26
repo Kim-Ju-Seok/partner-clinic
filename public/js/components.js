@@ -93,7 +93,7 @@ function renderHeader() {
     <div class="container header-inner">
       <div class="logo">
         <a href="#" onclick="navigateTo('home')">
-          <img src="http://partneros.kr/img/logo.png" alt="파트너정형외과">
+          <img src="https://partneros.kr/img/logo.png" alt="파트너정형외과">
         </a>
       </div>
       
@@ -191,7 +191,7 @@ function renderFooter() {
     <!-- 오른쪽 정보 영역 -->
     <div class="footer-info">
       <div class="footer-logo">
-        <img src="http://partneros.kr/img/tail_logo.png" alt="logo" style="filter:brightness(0) invert(1);">
+        <img src="https://partneros.kr/img/tail_logo.png" alt="logo" style="filter:brightness(0) invert(1);">
         <p class="footer-eng-name">PARTNER ORTHOPEDICS</p>
       </div>
       
@@ -220,11 +220,11 @@ function renderFloatingBtns() {
   return `
     <div id="quickMenu2">
       <dl>
-        <dd><a href="#page=6_2" onclick="navigateTo('6_2')"><img src="http://partneros.kr/img/mq_icon6.png" alt="진료예약"><p>진료예약</p></a></dd>
-        <dd><a href="#page=1_4" onclick="navigateTo('1_4')"><img src="http://partneros.kr/img/mq_icon3.png" alt="진료시간"><p>진료시간</p></a></dd>
-        <dd><a href="#page=1_5" onclick="navigateTo('1_5')"><img src="http://partneros.kr/img/mq_icon4.png" alt="오시는 길"><p>오시는 길</p></a></dd>
-        <dd><a href="#page=1_3" onclick="navigateTo('1_3')"><img src="http://partneros.kr/img/mq_icon5.png" alt="둘러보기"><p>둘러보기</p></a></dd>
-        <dd><a href="#" onclick="alert('블로그 페이지로 이동합니다.'); return false;"><img src="http://partneros.kr/img/mq_icon2.png" alt="블로그"><p>블로그</p></a></dd>
+        <dd><a href="#page=6_2" onclick="navigateTo('6_2')"><img src="https://partneros.kr/img/mq_icon6.png" alt="진료예약"><p>진료예약</p></a></dd>
+        <dd><a href="#page=1_4" onclick="navigateTo('1_4')"><img src="https://partneros.kr/img/mq_icon3.png" alt="진료시간"><p>진료시간</p></a></dd>
+        <dd><a href="#page=1_5" onclick="navigateTo('1_5')"><img src="https://partneros.kr/img/mq_icon4.png" alt="오시는 길"><p>오시는 길</p></a></dd>
+        <dd><a href="#page=1_3" onclick="navigateTo('1_3')"><img src="https://partneros.kr/img/mq_icon5.png" alt="둘러보기"><p>둘러보기</p></a></dd>
+        <dd><a href="#" onclick="alert('블로그 페이지로 이동합니다.'); return false;"><img src="https://partneros.kr/img/mq_icon2.png" alt="블로그"><p>블로그</p></a></dd>
       </dl>
   </div>`;
 }
