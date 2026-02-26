@@ -88,7 +88,7 @@ function updateActiveMenu(key) {
 function renderHomePage() {
   return `
   <div id="main_visual">
-    <video src="https://partneros.kr/video/mv.mp4" autoplay muted loop playsinline></video>
+    <video src="/video/mv.mp4" autoplay muted loop playsinline></video>
   </div>
   <div class="wrap" id="ma">
     <h4>척추·관절 건강 <span class="">파트너</span> 정형외과</h4>
