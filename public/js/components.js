@@ -118,78 +118,68 @@ function renderHeader() {
 
 function renderFooter() {
   return `
-  <div style="background:#3c5a44; overflow: hidden; font-family: 'Pretendard', sans-serif;">
-    <div class="wrap" id="me" style="padding:5rem 0 4rem 0; margin: 0 auto; color:#fff; position: relative; max-width:1200px;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:6rem;">
+  <div style="background:#405b45; overflow: hidden;">
+  <div class="wrap" id="me" style="padding:4rem 0 0 0; margin: 0; color:#fff; position: relative;">
+    <div class="dlw" style="display:flex; justify-content:space-between; align-items:flex-start; max-width:1200px; margin:0 auto; padding-bottom: 2rem; gap:2rem; position: relative; z-index: 10;">
+      <!-- 좌측: 진료시간 -->
+      <dt style="width: 30%; padding-right: 2rem; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+        <h4 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 2rem; margin-top: 0; border-bottom: 2px solid #fff; padding-bottom: 0.8rem; display: inline-block;">진료시간</h4>
+        <ul style="padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <li style="margin-bottom: 0.8rem; display:flex; justify-content:space-between; font-size:1.05rem;"><label style="opacity:0.9;">• 평 일</label><span style="font-weight:600;">09:00~20:00</span></li>
+          <li style="margin-bottom: 0.8rem; display:flex; justify-content:space-between; font-size:1.05rem;"><label style="opacity:0.9;">• 토요일</label><span style="font-weight:600;">09:00~14:00</span></li>
+          <li style="margin-bottom: 0.8rem; display:flex; justify-content:space-between; font-size:1.05rem;"><label style="opacity:0.9;">• 일요일·공휴일</label><span style="font-weight:600;">09:00~14:00</span></li>
+          <li style="margin-bottom: 0.8rem; display:flex; justify-content:space-between; font-size:1.05rem;"><label style="opacity:0.9;">• 도수·물리치료실</label><span style="font-weight:600;">평일 21:00까지</span></li>
+          <li style="display:flex; justify-content:space-between; font-size:1.05rem;"><label style="opacity:0.9;">• 점심시간</label><span style="font-weight:600;">13:00~14:00</span></li>
+        </ul>
+        <h5 style="font-size: 1.3rem; margin-top: 2rem; font-weight:700; color: #f1cc67;">365 정형외과전문의 진료</h5>
+        <div style="margin-top:1rem; display:inline-flex; gap:6px;">
+           <span style="background:#fff; color:#405b45; padding:6px 12px; border-radius:8px; font-weight:800; font-size:1.4rem;">연</span>
+           <span style="background:#fff; color:#405b45; padding:6px 12px; border-radius:8px; font-weight:800; font-size:1.4rem;">중</span>
+           <span style="background:#fff; color:#405b45; padding:6px 12px; border-radius:8px; font-weight:800; font-size:1.4rem;">무</span>
+           <span style="background:#fff; color:#405b45; padding:6px 12px; border-radius:8px; font-weight:800; font-size:1.4rem;">휴</span>
+        </div>
+      </dt>
+      <!-- 우측: 링크 카드 영역 -->
+      <dd style="width: 65%;">
+        <!-- 우측 상단 텍스트 (줄바꿈 방지를 위해 자간 축소, whitespace 설정) -->
+        <h6 style="font-size: 1.05rem; letter-spacing: 8px; margin-bottom: 0.8rem; opacity: 0.9; font-weight:400; text-align:right; white-space:nowrap;">P A R T N E R <span style="margin-left:4px;">O R T H O P E D I C S</span></h6>
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.3); margin-bottom: 2.5rem;"></div>
         
-        <!-- 좌측: 진료시간 -->
-        <div style="width: 320px; flex-shrink: 0;">
-          <h4 style="font-size: 3.2rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 3px solid #fff; padding-bottom: 0.5rem; display: inline-block; letter-spacing:-1px;">진료시간</h4>
-          <ul style="margin-bottom: 3rem; list-style:none; padding:0;">
-            <li style="margin-bottom: 1.2rem; display:flex; justify-content:space-between; font-size:1.2rem; font-weight:500;">
-              <span style="display:flex; align-items:center;"><i style="font-style:normal; margin-right:8px; font-size:0.8rem; vertical-align:middle;">●</i> 평 일</span>
-              <span style="font-weight:700;">09:00~20:00</span>
-            </li>
-            <li style="margin-bottom: 1.2rem; display:flex; justify-content:space-between; font-size:1.2rem; font-weight:500;">
-              <span style="display:flex; align-items:center;"><i style="font-style:normal; margin-right:8px; font-size:0.8rem; vertical-align:middle;">●</i> 토요일</span>
-              <span style="font-weight:700;">09:00~14:00</span>
-            </li>
-            <li style="margin-bottom: 1.2rem; display:flex; justify-content:space-between; font-size:1.2rem; font-weight:500;">
-              <span style="display:flex; align-items:center;"><i style="font-style:normal; margin-right:8px; font-size:0.8rem; vertical-align:middle;">●</i> 일요일·공휴일</span>
-              <span style="font-weight:700;">09:00~14:00</span>
-            </li>
-            <li style="margin-bottom: 1.2rem; display:flex; justify-content:space-between; font-size:1.15rem; font-weight:500;">
-              <span style="display:flex; align-items:center;"><i style="font-style:normal; margin-right:8px; font-size:0.8rem; vertical-align:middle;">●</i> 도수·물리치료실</span>
-              <span style="font-weight:700;">평일 21:00까지</span>
-            </li>
-            <li style="display:flex; justify-content:space-between; font-size:1.2rem; font-weight:500;">
-              <span style="display:flex; align-items:center;"><i style="font-style:normal; margin-right:8px; font-size:0.8rem; vertical-align:middle;">●</i> 점심시간</span>
-              <span style="font-weight:700;">13:00~14:00</span>
-            </li>
-          </ul>
-          
-          <div style="margin-top:4rem;">
-            <h5 style="font-size: 1.6rem; font-weight:800; color: #f1cc67; margin-bottom:1.5rem; letter-spacing:-0.5px;">365 정형외과전문의 진료</h5>
-            <div style="display:flex; gap:8px;">
-               <span style="background:#fff; color:#3c5a44; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-weight:900; font-size:1.6rem;">연</span>
-               <span style="background:#fff; color:#3c5a44; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-weight:900; font-size:1.6rem;">중</span>
-               <span style="background:#fff; color:#3c5a44; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-weight:900; font-size:1.6rem;">무</span>
-               <span style="background:#fff; color:#3c5a44; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-weight:900; font-size:1.6rem;">휴</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 우측: 링크 카드 영역 -->
-        <div style="flex-grow:1;">
-          <div style="position:relative; height:80px; margin-bottom:20px; text-align:center;">
-             <p style="position:absolute; top:10px; left:50%; transform:translateX(-50%); font-size:3.5rem; font-weight:900; opacity:0.1; letter-spacing:15px; width:100%; pointer-events:none; white-space:nowrap;">PARTNER ORTHOPEDICS</p>
-             <p style="position:relative; z-index:1; font-size:1.5rem; font-weight:600; letter-spacing:10px; padding-top:25px;">P A R T N E R <span style="margin-left:5px;">O R T H O P E D I C S</span></p>
-             <div style="width:100%; height:1px; background:rgba(255,255,255,0.2); margin-top:15px;"></div>
-          </div>
-
-          <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:15px;">
-            ${[
-      { t: '병원\n둘러보기', link: '1_3', bg: '/img/md_bg.jpg' },
-      { t: '진료시간', link: '1_4', bg: '/img/sub_top_bg.jpg' },
-      { t: '장비소개', link: '1_2', bg: '/img/mb_img.png' },
-      { t: '온라인\n상담·예약', link: '6_2', bg: '/img/mc_img.png' },
-      { t: '공지사항', link: '6_1', bg: '/img/sub_top_bg.jpg' }
+        <!-- 5개 카드 그리드 -->
+        <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:12px;">
+          ${[
+      { t: '병원\n둘러보기', link: '1_3', svg: '<path d="M3 21v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/><path d="M10 9h4"/><path d="M12 7v4"/>' },
+      { t: '진료시간', link: '1_4', svg: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/>' },
+      { t: '장비소개', link: '1_2', svg: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>' },
+      { t: '온라인\n상담·예약', link: '6_2', svg: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="12" y1="7" x2="12" y2="13"/>' },
+      { t: '공지사항', link: '6_1', svg: '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>' }
     ].map((item) => `
-              <div onclick="navigateTo('${item.link}')" class="me-card" style="position:relative; cursor:pointer; overflow:hidden; border-radius:15px; aspect-ratio:1/1.6; display:flex; align-items:center; justify-content:center; text-align:center; background:url('${item.bg}') center/cover no-repeat;">
-                <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1; transition:0.3s;" class="card-overlay"></div>
-                <p style="position:relative; z-index:2; font-size:1.4rem; font-weight:800; line-height:1.4; color:#fff; white-space:pre-wrap; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">${item.t}</p>
+            <div onclick="navigateTo('${item.link}')" class="me-card" style="position:relative; cursor:pointer; overflow:hidden; border-radius:12px; aspect-ratio:1/1.8; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; transition:0.3s;">
+              <!-- 오버레이 효과 방지 및 투명테두리 -->
+              <div style="position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid rgba(255,255,255,0.1); border-radius:12px; z-index:2; box-sizing:border-box;"></div>
+              
+              <!-- 아이콘 및 텍스트 -->
+              <div style="position:relative; z-index:3; display:flex; flex-direction:column; align-items:center;">
+                <div style="width:40px; height:40px; margin-bottom:15px; display:flex; align-items:center; justify-content:center;" class="me-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%;">
+                    ${item.svg}
+                  </svg>
+                </div>
+                <p style="font-size:1.05rem; font-weight:700; line-height:1.3; color:#fff; white-space:pre-wrap;">${item.t}</p>
               </div>
-            `).join('')}
-          </div>
+            </div>
+          `).join('')}
         </div>
-      </div>
-      <style>
-        #me:before { display: none !important; }
-        .me-card { transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.1); }
-        .me-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.4); }
-        .me-card:hover .card-overlay { background: rgba(0,0,0,0.2); }
-      </style>
+      </dd>
     </div>
+    <style>
+      #me:before { display: none !important; }
+      .me-card { background: #2b3a2f; border: 1px solid rgba(255,255,255,0.05); }
+      .me-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.3); background: #324436; }
+      .me-card:hover .me-icon svg { stroke: #fff; transform: scale(1.1); filter: drop-shadow(0 0 5px rgba(255,255,255,0.5)); }
+      .me-icon svg { transition: 0.3s; }
+    </style>
+  </div>
   </div>
   <footer id="footer" class="footer-area" style="margin-top: -1px; padding-top: 0;">
     <!-- 왼쪽 지도 영역 (구글 지도 - 파트너정형외과의원) -->
