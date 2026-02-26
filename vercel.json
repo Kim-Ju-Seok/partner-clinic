@@ -2,7 +2,7 @@
     "version": 2,
     "rewrites": [
         {
-            "source": "/(css|js|img|data|admin)/(.*)",
+            "source": "/(css|js|img|video|data|admin)/(.*)",
             "destination": "/public/$1/$2"
         },
         {
